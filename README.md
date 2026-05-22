@@ -28,3 +28,5 @@ Minimal Obsidian vault for OSCP prep. Designed to be expanded as you learn, not 
 
 - Tag boxes: `#linux` / `#windows` / `#ad`, `#easy` / `#medium` / `#hard`, `#rooted` / `#stuck` / `#assisted`
 - "Assisted" means you used a hint or writeup. Track this — too many `#assisted` means you're not ready yet.
+
+Test sync 

@@ -1,0 +1,9 @@
+{
+  "remoteURL": "https://github.com/stephlam-um/OSCP_Vault.git",
+  "gitLocation": "",
+  "syncinterval": 30,
+  "isSyncOnLoad": true,
+  "checkStatusOnLoad": true,
+  "noticeLevel": "ALL",
+  "showSyncSuccessNotice": true
+}
