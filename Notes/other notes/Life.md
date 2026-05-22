@@ -1,0 +1,21 @@
+---
+aliases:
+  - hi
+---
+I know what is the "right", sensible thing to do now. How to get things done. How to tackle the problems I am facing.
+
+Prepare for OSCP, get the cert before august this year, so I can apply to graduate programs in hk, singapore as a strong candidate; To apply for master programs in sg and hk as well, and these are my plan to fight against mediocrity. Against the chill, non-technical IT working environment in Macau, I used to dislike, but slowly pulled towards. What the fuck am I actually concerning about? money? my fam is willing to support me even I said this dumb decision to them, even it costs them 300k hkd just for the tuition if I fall for plan b. GIving up against the easy salary working in macau casinos that offer me a position without needing me to do anything extra, and a golden route they hope I'd be in , a more stable and prestigious job, working for the government. I know my decision sounds kinda irrational, and this thought makes me doubt, is it worth it? Going against the default option, choosing the hard route. IDK. That uncertainty, really made me hesitate. Especially when, I am not sure if cyber security is something that I love. It is just an acceptable career that I dun dislike. 
+
+AND this leads to my second task: find what I love. A sensible approach would be to observe what I care everyday, try to write down one thing I am curious, I wanna change, act on it. OR one thing that I enjoy. NOT entertainment, not "spending time with friends", oh shit, this is all I had in my life... 
+So, I should try doing more stuffs, intentionally recall, think, what excites me. In fact, I got some idea in mind, I like creating stuff, thats probably why I chose cs in the first place. 
+well, I used to like BCI too, since I hope one day, everyone will be equal in the virtual world, living another life in that world with the new technology. But then I realised, I was just romantizing the boring subject, I didnt like the learnign and researching part at all, so does the telecommunication major I took. That is the reason I turned to CS. I do enjoy writing apps afterall, but I mean, who doesnt? releasing my creativity, thats a important part. Making new things that people like. I can see that trait of mine in many other things I do, I made minecraft gaming youtube vids when I was 10. I enjoy making pretty posts on instagram, social medias in general, I wanted to look cool. I invented new drinks in my coffee shop, I celebrate little tools I made/implemented myself...  I enjoy poking a machine with no guide, but get frustrated when I was stuck and happy again whenever making progress. I am just a simple person like this.
+Yet I still dk what do I love, and what can I do for life. Like how jensen huang and elon mask does, they had strong convictions, they know what they want. and they work hard for it. 
+
+I always admire people who believes in themselves and knew what they want. Now, I have clue why is it. Because, its what I lack. 
+
+I said I enjoy routinery life, but I frequently messes up my own routine. I said I would persist on my goals. But I always give them up half ways: piano, projects, reading psychology, learning languages, many good routines/habits I wanna have. 
+I also thought I enjoy travelling and adventurous lifes. But I get anxious, if I didnt have a clear destination, what to do at the moment, when to leave, when I was travelling or having time outside alone. I went all around US, europe, yet still not a expert on travelling haha. 
+
+One of the few things I care about, is truly how I look, physically but also mentally, I workout for a good physique, I make up and style my hair , so I look better. I read psychology, philosophy so that I understnad people, so that I wont act stupid. and not to BE a stupid for real.
+
+I am not sure if what I was doing is right. I knew you couldnt tell. In fact, I am the judge of myself and no one except me can answer this question. Guess, I will just keep trying,  keep building, while at the same time, preping for my career path. One day, I will know what I want,. 
