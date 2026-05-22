@@ -61,3 +61,8 @@ Bash
 nikto -h http://10.10.10.121                     # Quick web vulnerability scan
 nmap -p80,443 --script="http-*" 10.10.10.121     # Nmap HTTP recon scripts
 ```
+
+## Fuzz
+```bash
+ffuf -u http://<target-ip>/FUZZ -w /usr/share/wordlists/dirb/common.txt
+```
