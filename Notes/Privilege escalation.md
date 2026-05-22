@@ -7,6 +7,8 @@
 ```bash
 ./linpeas.sh
 ```
+[LinPeas.sh](https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh)
+
 **Inspecting software**
 ```bash
 dpkg -l
