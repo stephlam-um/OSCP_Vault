@@ -6,7 +6,7 @@ Bash
 
 ```
 # Directory scan (Standard)
-gobuster dir -u http://10.10.10.121/ -w /usr/share/seclists/Discovery/Web-Content/common.txt
+gobuster dir -u http://10.129.3.6/ -w /usr/share/wordlists/dirb/common.txt
 
 # Directory scan + extensions + hide specific status codes (Essential)
 gobuster dir -u http://10.10.10.121/ -w [wordlist] -x php,txt,html -b 403,404
