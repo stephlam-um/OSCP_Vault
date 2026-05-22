@@ -20,7 +20,7 @@ _One-sentence: what was the foothold and what was the privesc?_
 Tried so far
 nmap shown 3 tcp ports: ftp, ssh and the html page, ftp port has a DoS CVE but doesnt help with PE, ssh no password; ftp no pw. 
 
-
+PASS:Buck3tH4TF0RM3!
 
 ## Recon
 
