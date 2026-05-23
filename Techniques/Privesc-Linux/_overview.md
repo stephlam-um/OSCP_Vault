@@ -17,6 +17,15 @@ chmod +x pspy64
 ./pspy64
 ```
 
+```bash
+# Run with a 5-second timeout on the sudo check
+./linpeas.sh -t 5
+
+# Or completely skip the sudo check if it keeps breaking
+./linpeas.sh -s
+```
+
+
 ## Manual quick wins
 
 ### Sudo
