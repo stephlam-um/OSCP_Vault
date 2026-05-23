@@ -2,8 +2,8 @@
 
 ## Setup listener
 ```bash
-nc -lvnp 443
 rlwrap nc -lvnp 443   # better - arrow keys + history
+nc -lvnp 443
 ```
 
 ## Bash
