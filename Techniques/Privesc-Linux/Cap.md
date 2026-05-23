@@ -1,21 +1,22 @@
 ---
-box: 
+box: Cap
 platform: HTB
-os: 
-difficulty: 
-ip: 
-date_started: 
-date_rooted: 
-time_taken: 
-status: in-progress
+os: Linux
+difficulty: easy
+ip:
+date_started: 22/5/2026
+date_rooted: 23/5/2026
+time_taken: 4 hours
+status: done
 tags:
-  - 
+  -
 ---
 
 # {{Cap}}
 
 ## Summary
-_One-sentence: what was the foothold and what was the privesc?_
+_One-sentence: web IDOR, direct ssh, python cap_id = 0
+
 
 Tried so far
 nmap shown 3 tcp ports: ftp, ssh and the html page, ftp port has a DoS CVE but doesnt help with PE, ssh no password; ftp no pw. 
