@@ -2,19 +2,6 @@ enumerate → identify vector → exploit → repeat at next privilege level.
 
 ## Workspace setup (do this once)
 
-Set up your screen so each tool has a fixed home. Stop alt-tabbing randomly.
-
-**If single monitor:**
-
-- Left half: Kali (terminal)
-- Right half top: Obsidian (notes for current box)
-- Right half bottom: Browser (Google + writeups + target's web app)
-
-**If dual monitor (or external):**
-
-- Main monitor: Kali terminal full-screen
-- Second monitor: Obsidian on left, browser on right
-
 **Inside Kali — use tmux from day one.** This is the single biggest workflow upgrade. One terminal window, multiple panes/sessions:
 
 ```
@@ -26,14 +13,6 @@ tmux new -s box-name
 # tmux attach -t box-name → re-attach
 ```
 
-A typical box tmux layout:
-
-- **Pane 1:** active work (current command)
-- **Pane 2:** listener (`rlwrap nc -lvnp 443`) — always ready
-- **Pane 3:** long-running scan (nmap, gobuster) so it keeps going while you do other things
-- **Pane 4:** notes pane (vim or just `tail -f` on a scratch file)
-
-Now you don't lose your reverse shell when you need to run another command. Huge.
 
 ## Per-box folder structure
 
@@ -64,8 +43,6 @@ Screenshots dropped in `screenshots/`.
 Set up a shared folder in VMware so `~/oscp/` on Kali maps to a folder on Windows. Now screenshots and command outputs are accessible to Obsidian without copy-paste.
 
 ## The actual loop
-
-Here's the workflow as a sequence. Follow it linearly — the discipline is _not_ skipping ahead.
 
 ### Phase 1: Recon (10-20 min)
 
