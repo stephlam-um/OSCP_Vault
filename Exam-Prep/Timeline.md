@@ -1,43 +1,14 @@
 
-**Thu May 22 — Setup day (2 hrs, 8-10pm)**
 
-- Install Obsidian, fork an OSCP notes template from GitHub, create vault structure (folders: Boxes/Linux, Boxes/Windows, Boxes/AD, Techniques, Cheatsheets)
-- Verify Kali VM works, snapshot it
-- Set up a Windows 10 VM for testing payloads locally (download eval ISO from Microsoft)
-- Bookmark: TJ Null list, HTB Academy, IppSec YouTube
 
-**Fri May 23 — First box (2 hrs, 8-10pm)**
+**Before China Trip**
+Aim: Familiarity, finish AD
+Plan: Morning read AD material, afternoon hacking standalone boxes, night fix notes
+If time l
 
-- Root HTB _Lame_, write notes in template
-
-**Sat May 24 — Box + AD module start (4 hrs, 10am-2pm)**
-
-- Root HTB _Legacy_
-- Start HTB Academy "Active Directory Enumeration & Attacks" — Section 1-2
-
-**Sun May 25 — Rest day**
-
-- Nothing. Gym, friends, sleep.
-
-**Mon May 26 — Box (2 hrs, 8-10pm)**
-
-- Root HTB _Blue_
-
-**Tue May 27 — AD module (2 hrs, 8-10pm)**
-
-- HTB Academy AD module, sections 3-4
-
-**Wed May 28 — Box (2 hrs, 8-10pm)**
-
-- Root HTB _Devel_
-
-**Thu May 29 — AD module (2 hrs, 8-10pm)**
-
-- HTB Academy AD module, sections 5-6
 
 **Fri May 30 — Box + pack (2 hrs, 8-10pm)**
 
-- Root HTB _Jerry_
 - Pack laptop, charger, mouse, ethernet adapter for China trip
 
 ## China trip: May 31 - June 16 (recurring event)
