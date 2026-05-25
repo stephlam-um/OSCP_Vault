@@ -1,3 +1,5 @@
+> https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html
+> https://gtfobins.org/
 # Linux Privilege Escalation
 
 ## Automated enumeration (run first, read while running)
@@ -110,6 +112,7 @@ ss -tulpn
 
 ## Common vectors checklist
 
+- [ ] cat /etc/passwd
 - [ ] sudo -l → gtfobins
 - [ ] SUID → gtfobins
 - [ ] Capabilities → gtfobins

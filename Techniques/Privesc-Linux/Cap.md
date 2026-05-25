@@ -12,27 +12,47 @@ tags:
   -
 ---
 
-# {{Cap}}
+# Cap
 
-## Summary
-_One-sentence: web IDOR, direct ssh, python cap_id = 0
-
-
-Tried so far
-nmap shown 3 tcp ports: ftp, ssh and the html page, ftp port has a DoS CVE but doesnt help with PE, ssh no password; ftp no pw. 
-
+- **Path:** Web IDOR $\rightarrow$ Leaked Creds $\rightarrow$ SSH Login $\rightarrow$ Python Capabilities Root PE
+    
+- **Credentials:** `Nathan : Buck3tH4TF0RM3!`
 
 
 ## Recon
 
-### Nmap
+**Nmap**
 ```
 nmap -T4 -F $IP
 nmap -Pn -p- --min-rate 1000 -T4 $IP -oN allports.txt
 nmap -sC -sV -p<open ports> -oA detailed_scan $IP
 nmap -sU -F $IP // if got stuck
 ```
+- **Port 21 (FTP):** vsftpd 3.0.3 (No anonymous access)
+    
+- **Port 22 (SSH):** Open (No password yet)
+    
+- **Port 80 (HTTP):** Gunicorn server $\rightarrow$ Means a **Python** backend (Flask/Django)
 
+
+## Web & Foothold
+*IDOR and pcap*
+Do not forget negative values and zero during enumeration
+Add:
+
+```
+ffuf -u http://$IP/FUZZ -w /usr/share/seclists/...
+```
+
+and:
+
+``` bash
+Observe object references:
+?id=1
+/download/12
+/view/5
+Try:0 -1 9999 other users
+```
 ## Enumeration
 _Per-service findings. Web dirs, SMB shares, versions, default creds tried._
 
@@ -40,24 +60,32 @@ Ports found: FTP, SSH, Web
 
 **FTP**
 `anonymous:` failed, pw required
-
-**Web**
-*IDOR and pcap*
-
-
-
+found vstfp 3.0.3, quick check, not vulnerable
 
 ## Foothold
 _How you got the initial shell. Exploit used, payload, command run._
 
-```
-# command
-```
+IDOR -> leaked creds -> FTP -> SSH reuse 
 
-**Key insight:** 
 
 ## Privilege Escalation
+
 _What user → what user. Tool used (linpeas/winpeas/etc), vector found, exploit._
+
+> Core: find things with extra privilege, make it execute shell.
+
+**Manual Discovery** 
+Gunicorn indicates Python WSGI server
+→ likely Flask/Django app
+→ Python apps often store source in app.py/wsgi.py
+→ check common locations:
+/opt
+/var/www
+/home/*
+
+→ found capability-enabled python binary
+→ python has cap_setuid
+→ can elevate via os.setuid(0)
 
 **LinEnum**
 ```bash
@@ -73,7 +101,6 @@ chmod +x /tmp/linpeas.sh
 /tmp/linpeas.sh > /tmp/linpeas_results.txt
 ```
 
-**But instead of running enum scripts, check manually by:** 
 
 Found vuln, exploit 
 ```
