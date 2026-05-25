@@ -27,7 +27,8 @@ PASS:Buck3tH4TF0RM3!
 
 ### Nmap
 ```
-nmap -sC -sV -oN nmap/initial.txt $IP
+nmap -Pn -p- --min-rate 1000 -T4 $IP -oN allports.txt
+nmap -sC -sV -p<open ports> $IP
 ```
 
 ### Notes
@@ -66,9 +67,17 @@ _What user → what user. Tool used (linpeas/winpeas/etc), vector found, exploit
 ## Lessons
 _5 minutes. What did you learn? What would you do faster next time? What did you NOT know going in?_
 
-- 
-- 
+1. Some Linux Hacks
+```bash
+During LinPeas, open another SSH window to poke around,
+in fact, poke around during scan, dun waste time
+```
+2. The Enum techniques,  adaptive DFS: 
+```bash
+List all of the pages to explore, go one by one, stop when felt like its a rabbit hole and note down if all other didnt work out, come back to exploit with this method (fuzz)
+```
 
+2. 
 ## Links to techniques
 _Link to `Techniques/` notes for anything reusable._
 
@@ -77,4 +86,4 @@ _Link to `Techniques/` notes for anything reusable._
 ## References
 _Writeups, IppSec video, exploit-db links._
 
-- 
+- IppSec video

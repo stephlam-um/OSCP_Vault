@@ -4,7 +4,7 @@
 **Before China Trip**
 Aim: Familiarity, finish AD
 Plan: Morning read AD material, afternoon hacking standalone boxes, night fix notes
-If time left, do: Privilege Escalation (Windows & Linux), Port Redirection and Tunneling
+If time left, do: Foothold, Privilege Escalation (Windows & Linux), Port Redirection and Tunneling
 
 
 **Fri May 30 — Box + pack (2 hrs, 8-10pm)**
