@@ -17,5 +17,9 @@ monodis --userstrings UserInfo.exe
 
 loots
 ```bash
-pw:nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz
+ldap:nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz
+```
+```bash
+support:Ironside47pleasure40Watchful
+log in through evil-winrm
 ```
