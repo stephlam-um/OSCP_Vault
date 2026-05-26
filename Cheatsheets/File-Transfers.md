@@ -21,6 +21,8 @@ impacket-smbserver share $(pwd) -smb2support
 # from windows target:
 # copy \\$IP\share\file.exe .
 # or: net use Z: \\$IP\share
+smbclient //$IP/support-tools -U '' -N -c 'recurse ON; prompt OFF; mget *'
+smbclient //$IP/support-tools -N --option="client max protocol=SMB3" --option="client Smb3Encryption=desired" --option="client parallel reads=no" -c 'recurse ON; prompt OFF; mget *'
 ```
 
 ### SMB with auth

