@@ -42,7 +42,7 @@ smbclient //$IP/support-tools -U 'jdoe%Password123' or -N
 ### BloodHound
 ```bash
 # Python collector (from Kali)
-bloodhound-python -u user -p pass -d domain.local -ns $DC -c All --zip
+bloodhound-python -u user -p pass -d domain.local -ns $DC_IP -c All --zip
 
 # import to BloodHound GUI
 neo4j console &

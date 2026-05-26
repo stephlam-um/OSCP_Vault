@@ -23,3 +23,19 @@ ldap:nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz
 support:Ironside47pleasure40Watchful
 log in through evil-winrm
 ```
+
+port 5985 http is for winrm. 
+port 5986 https is for secure winrm
+```bash
+window flags often located in desktop
+```
+
+To check on win for domain privilege:
+`net user support /domain`
+
+```bash
+bloodhound-python -u 'support' -p 'Ironside47pleasure40Watchful' -d 'support.htb' -ns $IP -c All --zip
+
+sudo 
+bloodhound-start
+```
