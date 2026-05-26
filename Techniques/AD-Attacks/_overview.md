@@ -33,6 +33,9 @@ nxc smb $IP -u '' -p '' --rid-brute
 
 # List Active Domain Password Policy (Find lockout thresholds)
 nxc smb $IP -u 'username' -p 'password' --pass-pol
+
+THen 
+smbclient //$IP/support-tools -U 'jdoe%Password123' or -N 
 ```
 ## With creds — full enumeration
 
