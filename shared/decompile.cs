@@ -18,5 +18,8 @@ internal class Protected
 		}
 		return Encoding.Default.GetString(array2);
 	}
-    Console.WriteLine(getPassword());
+	static void Main(string[] args)
+    {
+        Console.WriteLine(getPassword());
+    }
 }
