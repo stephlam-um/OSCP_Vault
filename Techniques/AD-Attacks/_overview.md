@@ -45,6 +45,8 @@ impacket-GetADUsers -all domain.local/user:pass -dc-ip $DC
 # computers
 ldapsearch -x -H ldap://$DC -D "user@domain.local" -w pass -b "DC=domain,DC=local" "(objectClass=computer)"
 ```
+- 389 (LDAP)
+- 636 (LDAPS)
 
 ## Kerberos attacks
 
