@@ -16,4 +16,6 @@ monodis --userstrings UserInfo.exe
 ```
 
 loots
-LDAP: sAMAccountName
+```bash
+pw:nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz
+```
