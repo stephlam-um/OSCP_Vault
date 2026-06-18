@@ -4,8 +4,9 @@ os: Windows
 technique: AD-attacks
 ---
 **Loots**
-support: Ironside47pleasure40Watchful  
-ldap: nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz
+`support: Ironside47pleasure40Watchful` 
+`ldap: nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz`
+`root.txt:b14afc82ad72a02b687c93e4ec445f4a`
 # HTB Support
 
 ## 0. Pre-box workflow fixes
@@ -22,7 +23,7 @@ ping -c 2 $IP
 Add hostnames early:
 
 ```bash
-echo "$IP support.htb dc.support.htb" | sudo tee -a /etc/hosts
+echo "<IP> support.htb dc.support.htb" | sudo tee -a /etc/hosts # type the IP
 getent hosts support.htb
 getent hosts dc.support.htb
 ```
